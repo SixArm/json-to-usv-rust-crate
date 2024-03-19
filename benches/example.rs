@@ -2,6 +2,7 @@ use criterion::{criterion_group, criterion_main, Criterion};
 use rand::*;
 use rand::distributions::*;
 use json_to_usv::json_to_usv;
+use usv::style::Style;
 
 /// Generate a random string of given length
 #[inline]
@@ -37,7 +38,7 @@ fn bench_example(c: &mut Criterion){
         &format!("benchmark group unit_length: {}, unit_count: {}, record_count: {}", unit_length, unit_count, record_count)
     );
     group.sample_size(10);
-    group.bench_function("json_to_usv", |b| b.iter(|| json_to_usv(&json_data)));
+    group.bench_function("json_to_usv", |b| b.iter(|| json_to_usv(&json_data, &Style::default())));
     group.finish();
 }
 

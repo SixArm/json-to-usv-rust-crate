@@ -20,10 +20,35 @@ Example with output to a file:
 cat example.json | json-to-usv > example.usv
 ```
 
-
 ## Options
 
-* -d, --delimiter <delimiter> : Set the delimiter character [default: ";"]
+Options for USV separators and modifiers:
+
+* -u | --unit-separator : Set the unit separator string.
+
+* -r | --record-separator : Set the record separator string.
+
+* -g | --group-separator : Set the group separator string.
+
+* -f | --file-separator : Set the file separator string.
+
+* --escape : Set the escape string.
+
+* --end-of-transmission : Set the end-of-transmission string.
+
+Options for USV style sets:
+
+* --style-braces : Set the style to use braces, such as "{US}" for Unit Separator.
+
+* --style-controls : Set the style to use controls, such as "\u{001F}" for Unit Separator.
+
+* --style-symbols : Set the style to use symbols, such as "␟" for Unit Separator.
+
+* --style-liners : Set the style to use liners wrapping every symbol, such as "\n␟\n" for Unit Separator.
+
+* --style-sheets : Set the style similar to spreadsheet sheets, such as "␟" for Unit Separator and "␟\n" for Record Separator.
+
+Options for command line tools:
 
 * -h, --help : Print help
 
@@ -32,7 +57,6 @@ cat example.json | json-to-usv > example.usv
 * -v, --verbose... : Set the verbosity level: 0=none, 1=error, 2=warn, 3=info, 4=debug, 5=trace. Example: --verbose …
 
 * --test : Print test output for debugging, verifying, tracing, and the like. Example: --test
-
 
 ## Install
 
@@ -43,7 +67,6 @@ cargo install json-to-usv
 ```
 
 Link: [https://crates.io/crates/json-to-usv](https://crates.io/crates/json-to-usv)
-
 
 ## Example
 
@@ -65,10 +88,21 @@ cat example.json | json-to-usv
 Output:
 
 ```usv
+a␟b␟␞c␟d␟␞
+```
+
+Run:
+
+```sh
+cat example.json | json-to-usv --style-sheets
+```
+
+Output:
+
+```usv
 a␟b␟␞
 c␟d␟␞
 ```
-
 
 ## FAQ
 
@@ -105,8 +139,8 @@ Constructive feedback welcome. Pull requests and feature requests welcome.
 ## Tracking
 
 * Package: json-to-usv-rust-crate
-* Version: 1.0.0
+* Version: 1.1.0
 * Created: 2024-03-09T13:33:20Z
-* Updated: 2024-03-17T19:24:53Z
+* Updated: 2024-03-19T21:20:08Z
 * License: MIT or Apache-2.0 or GPL-2.0 or GPL-3.0 or contact us for more
 * Contact: Joel Parker Henderson (joel@sixarm.com)

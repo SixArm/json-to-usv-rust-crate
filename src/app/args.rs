@@ -5,7 +5,7 @@
 //! such as being able to start our app with other arg parsers.
 
 use std::default::Default;
-use crate::constants::*;
+use usv::style::Style;
 
 #[derive(Debug)]
 pub struct Args {
@@ -18,33 +18,17 @@ pub struct Args {
     /// Example: 5 means print debug diagnostics.
     pub(crate) log_level: Option<::log::Level>,
 
-    // File separator string.
-    // Example: "␜\n".
-    pub(crate) file_separator: String,
-
-    // Group separator string.
-    // Example: "␝\n".
-    pub(crate) group_separator: String,
-
-    // Record separator string.
-    // Example: "␞\n".
-    pub(crate) record_separator: String,
-
-    // Unit separator string.
-    // Example: "␟".
-    pub(crate) unit_separator: String,
-
+    /// USV Style
+    /// Example: separator strings
+    pub(crate) style: Style,
 }
 
-impl Default for Args {
+impl<'a> Default for Args {
     fn default() -> Args {
         Args {
             test: false,
             log_level: None,
-            file_separator: FILE_SEPARATOR_DEFAULT.into(),
-            group_separator: GROUP_SEPARATOR_DEFAULT.into(),
-            record_separator: RECORD_SEPARATOR_DEFAULT.into(),
-            unit_separator: UNIT_SEPARATOR_DEFAULT.into(),
+            style: Style::default(),
         }
     }
 }
