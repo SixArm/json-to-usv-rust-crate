@@ -1,6 +1,7 @@
 //! # json-to-usv
 //! 
-//! Convert JavaScript Object Notation (JSON) to [Unicode Separated Values (USV)](https://github.com/sixarm/usv).
+//! Convert [JavaScript Object Notation (JSON)](https://github.com/SixArm/usv/tree/main/doc/comparisons/json)
+//! to [Unicode Separated Values (USV)](https://github.com/sixarm/usv).
 //! 
 //! Syntax:
 //! 
@@ -24,13 +25,13 @@
 //! 
 //! Options for USV separators and modifiers:
 //! 
-//! * -u | --unit-separator : Set the unit separator string.
+//! * -u --unit-separator : Set the unit separator string.
 //! 
-//! * -r | --record-separator : Set the record separator string.
+//! * -r --record-separator : Set the record separator string.
 //! 
-//! * -g | --group-separator : Set the group separator string.
+//! * -g --group-separator : Set the group separator string.
 //! 
-//! * -f | --file-separator : Set the file separator string.
+//! * -f --file-separator : Set the file separator string.
 //! 
 //! * --escape : Set the escape string.
 //! 
@@ -50,11 +51,11 @@
 //! 
 //! Options for command line tools:
 //! 
-//! * -h, --help : Print help
+//! * -h --help : Print help
 //! 
-//! * -V, --version : Print version
+//! * -V --version : Print version
 //! 
-//! * -v, --verbose... : Set the verbosity level: 0=none, 1=error, 2=warn, 3=info, 4=debug, 5=trace. Example: --verbose …
+//! * -v --verbose... : Set the verbosity level: 0=none, 1=error, 2=warn, 3=info, 4=debug, 5=trace. Example: --verbose …
 //! 
 //! * --test : Print test output for debugging, verifying, tracing, and the like. Example: --test
 //! 
