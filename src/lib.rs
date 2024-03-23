@@ -3,6 +3,7 @@ pub mod app {
     pub mod clap;
     pub mod log;
 }
+pub mod examples;
 pub mod leaf;
 pub mod nest;
 
@@ -16,7 +17,7 @@ pub fn json_to_usv<
     style: &Style,
 ) -> Result<String, serde_json::Error> {
     let mut s = String::new();
-    match serde_json::from_str::<Nest>(json.as_ref())? {        
+    match serde_json::from_str::<Nest>(json.as_ref())? {
         Nest::Leaf(x) => {
             s += &format!("{}", x);
             s += &style.unit_separator;

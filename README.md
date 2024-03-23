@@ -15,29 +15,25 @@ Example:
 cat example.json | json-to-usv
 ```
 
-Example with output to a file:
-
-```sh
-cat example.json | json-to-usv > example.usv
-```
+More examples below.
 
 ## Options
 
 Options for USV separators and modifiers:
 
-* -u --unit-separator : Set the unit separator string.
+* -u, --us : Set the unit separator (US) string.
 
-* -r --record-separator : Set the record separator string.
+* -r, --rs : Set the record separator (RS) string.
 
-* -g --group-separator : Set the group separator string.
+* -g, --gs : Set the group separator (GS) string.
 
-* -f --file-separator : Set the file separator string.
+* -f, --fs : Set the file separator (FS) string.
 
-* --escape : Set the escape string.
+* -e, --esc : Set the escape (ESC) string.
 
-* --end-of-transmission : Set the end-of-transmission string.
+* -z, --eot : Set the end of transmission (EOT) string.
 
-Options for USV style sets:
+Options for USV style:
 
 * --style-braces : Set the style to use braces, such as "{US}" for Unit Separator.
 
@@ -45,17 +41,29 @@ Options for USV style sets:
 
 * --style-symbols : Set the style to use symbols, such as "␟" for Unit Separator.
 
-* --style-liners : Set the style to use liners wrapping every symbol, such as "\n␟\n" for Unit Separator.
+Options for USV layout:
 
-* --style-sheets : Set the style similar to spreadsheet sheets, such as "␟" for Unit Separator and "␟\n" for Record Separator.
+* --layout-0: Show each item with no line around it. This is no layout, in other words one long line.
+
+* --layout-1: Show each item with one line around it. This is like single-space lines for long form text.
+
+* --layout-2: Show each item with two lines around it. This is like double-space lines for long form text.
+
+* --layout-units: Show each unit on one line. This can be helpful for line-oriented tools.
+
+* --layout-records: Show each record on one line. This is like a typical spreadsheet sheet export.
+
+* --layout-groups: Show each group on one line. This can be helpful for folio-oriented tools.
+
+* --layout-files: Show one file on one line. This can be helpful for archive-oriented tools.
 
 Options for command line tools:
 
-* -h --help : Print help
+* -h, --help : Print help
 
-* -V --version : Print version
+* -V, --version : Print version
 
-* -v --verbose... : Set the verbosity level: 0=none, 1=error, 2=warn, 3=info, 4=debug, 5=trace. Example: --verbose …
+* -v, --verbose... : Set the verbosity level: 0=none, 1=error, 2=warn, 3=info, 4=debug, 5=trace. Example: --verbose …
 
 * --test : Print test output for debugging, verifying, tracing, and the like. Example: --test
 
@@ -84,18 +92,6 @@ Run:
 
 ```sh
 cat example.json | json-to-usv
-```
-
-Output:
-
-```usv
-a␟b␟␞c␟d␟␞
-```
-
-Run:
-
-```sh
-cat example.json | json-to-usv --style-sheets
 ```
 
 Output:
@@ -140,8 +136,8 @@ Constructive feedback welcome. Pull requests and feature requests welcome.
 ## Tracking
 
 * Package: json-to-usv-rust-crate
-* Version: 1.1.0
+* Version: 1.2.0
 * Created: 2024-03-09T13:33:20Z
-* Updated: 2024-03-19T21:20:08Z
+* Updated: 2024-03-23T13:06:23Z
 * License: MIT or Apache-2.0 or GPL-2.0 or GPL-3.0 or contact us for more
 * Contact: Joel Parker Henderson (joel@sixarm.com)
