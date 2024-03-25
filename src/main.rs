@@ -37,7 +37,7 @@
 //!
 //! * --style-braces : Set the style to use braces, such as "{US}" for Unit Separator.
 //!
-//! * --style-controls : Set the style to use controls, such as "\u{001F}" for Unit Separator.
+//! * --style-controls : Set the style to use controls, such as "\u{1F}" for Unit Separator.
 //!
 //! * --style-symbols : Set the style to use symbols, such as "␟" for Unit Separator.
 //!
@@ -103,6 +103,16 @@
 //!
 //! ## FAQ
 //!
+//! ### What converters are available?
+//!
+//! * [asv-to-usv](https://crates.io/crates/asv-to-usv] & [usv-to-asv](https://crates.io/crates/usv-to-asv)
+//!
+//! * [csv-to-usv](https://crates.io/crates/asv-to-csv] & [usv-to-csv](https://crates.io/crates/usv-to-csv)
+//!
+//! * [json-to-usv](https://crates.io/crates/json-to-usv] & [usv-to-json](https://crates.io/crates/usv-to-json)
+//!
+//! * [xlsx-to-usv](https://crates.io/crates/xlsx-to-usv] & [usv-to-asv](https://crates.io/crates/usv-to-xlsx)
+//!
 //! ### When to use this command?
 //!
 //! Use this command when you want to convert from JSON to USV.
@@ -115,10 +125,6 @@
 //! from a variety of programs, including Excel, to USV so we're better-able to
 //! handle quoting, and multi-line data units, and Unicode characters in a wide
 //! variety of human languages.
-//!
-//! ### Is there a similar command to convert from USV to JSON?
-//!
-//! Yes: [usv-to-json](https://crates.io/crates/usv-to-json).
 //!
 //! ### Why use USV instead of JSON?
 //!
