@@ -147,9 +147,9 @@
 //! ## Tracking
 //!
 //! * Package: json-to-usv-rust-crate
-//! * Version: 1.2.2
+//! * Version: 1.2.3
 //! * Created: 2024-03-09T13:33:20Z
-//! * Updated: 2024-04-04T12:25:24Z
+//! * Updated: 2024-04-11T18:14:24Z
 //! * License: MIT or Apache-2.0 or GPL-2.0 or GPL-3.0 or contact us for more
 //! * Contact: Joel Parker Henderson (joel@sixarm.com)
 
